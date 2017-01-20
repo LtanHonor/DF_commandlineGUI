@@ -1,0 +1,10 @@
+E:\VS2010projects\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\bin\Debug\DwarfFortress_HeadlessGUI.exe
+E:\VS2010projects\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\bin\Debug\DwarfFortress_HeadlessGUI.pdb
+E:\VS2010projects\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\obj\x86\Debug\DwarfFortress_HeadlessGUI.Form1.resources
+E:\VS2010projects\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\obj\x86\Debug\DwarfFortress_HeadlessGUI.Properties.Resources.resources
+E:\VS2010projects\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\obj\x86\Debug\DwarfFortress_HeadlessGUI.csproj.GenerateResource.Cache
+E:\VS2010projects\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\obj\x86\Debug\DwarfFortress_HeadlessGUI.exe
+E:\VS2010projects\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\obj\x86\Debug\DwarfFortress_HeadlessGUI.pdb
+E:\VS2010projects\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\obj\x86\Debug\DwarfFortress_HeadlessGUI.csprojResolveAssemblyReference.cache
+E:\VS2010projects\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\bin\Debug\INIFileParser.dll
+E:\VS2010projects\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\bin\Debug\INIFileParser.xml
