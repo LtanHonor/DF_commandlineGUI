@@ -20,8 +20,11 @@ namespace DwarfFortress_HeadlessGUI
         string workingFolder;
         string workingFilename;
         string worldNumber;
-        string worldArray;
+        List<string> worldArray = new List<string>();
         string tempName;
+        string worldGenFolder;
+        string worldGenFile = "world_gen.txt";
+        
 
         int worldInt;
         int runThis = 1;
@@ -31,17 +34,7 @@ namespace DwarfFortress_HeadlessGUI
         {
             InitializeComponent();
             //System.IO.DirectoryInfo
-        }
-
-        private void button1_Click(object sender, System.EventArgs e)
-        {
-            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            {
-                System.IO.StreamReader sr = new
-                   System.IO.StreamReader(openFileDialog1.FileName);
-                MessageBox.Show(sr.ReadToEnd());
-                sr.Close();
-            }
+            seedType = textBox1.Text;
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -97,10 +90,11 @@ namespace DwarfFortress_HeadlessGUI
                     headless.StartInfo.UseShellExecute = false;
                     headless.StartInfo.WorkingDirectory = @workingFolder;
                     headless.StartInfo.FileName = @workingFilename;
-                    headless.StartInfo.Arguments = @" -gen " + worldNumber + " " + seedType + " " + worldName; // if you need some
+                    string tempArgs = @" -gen " + @worldNumber + @" " + @seedType + " \"" + @worldName + "\"";
+                    headless.StartInfo.Arguments = @" -gen " + @worldNumber + @" " + @seedType + " \"" + @worldName + "\""; // if you need some
                     headless.StartInfo.CreateNoWindow = true;
                     //headless.EnableRaisingEvents = true;
-
+                    //MessageBox.Show(tempArgs);
                     headless.Start();
                     headless.WaitForExit();
                 }
@@ -133,9 +127,7 @@ namespace DwarfFortress_HeadlessGUI
                 sr.Close();
             }
             workingFilename = openFileDialog2.FileName;
-
         }
-
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -148,6 +140,26 @@ namespace DwarfFortress_HeadlessGUI
                 textBox2.Text = Convert.ToString(directoryCount);
             }
             workingFilename = workingFolder + "\\Dwarf Fortress.exe";
+            worldGenFolder = workingFolder + "\\data\\init\\";
+            FileStream fs = new FileStream(@worldGenFolder + worldGenFile, FileMode.Open, FileAccess.Read);
+            StreamReader reader = new StreamReader(fs);
+            string line = reader.ReadLine();
+            string cup = reader.ReadToEnd();
+            fs.Position = 0;
+            line = null;
+            int loopCount = 0;
+            while ((line = reader.ReadLine()) != null)
+            {
+                if (line.Contains("TITLE"))
+                {
+                    line = line.Replace("	[TITLE:", "");
+                    line = line.Replace("]", "");
+                    worldArray.Add(line);
+                }
+                loopCount++;
+            }
+            comboBox1.DataSource = worldArray;
+            reader.Close();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -155,48 +167,9 @@ namespace DwarfFortress_HeadlessGUI
             worldNumber = textBox2.Text;
         }
 
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            worldName = textBox3.Text;
-        }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            //if (openFileDialog3.ShowDialog() == System.Windows.Forms.DialogResult.OK)
-            //{
-            //    System.IO.StreamReader sr = new
-            //       System.IO.StreamReader(openFileDialog3.FileName);
-            //    MessageBox.Show(sr.ReadToEnd());
-            //    sr.Close();
-            //}
-                    //the path of the file
-        FileStream inFile = new FileStream(openFileDialog3.FileName, FileMode.Open, FileAccess.Read);
-        StreamReader reader = new StreamReader(inFile);
-        string record;
-        string input;
-        input = "TITLE:";
-        try
-        {
-            //the program reads the record and displays it on the screen
-            record = reader.ReadLine();
-            while (record != null)
-            {
-                if (record.Contains(input))
-                {
-                    worldArray = record;
-                }
-                    record = reader.ReadLine();
-            }
-        }
-        finally
-        {
-            //after the record is done being read, the progam closes
-            reader.Close();
-            inFile.Close();
-        }
-        Console.ReadLine();
-    
-        }
+
+        
 
         private void label3_Click(object sender, EventArgs e)
         {
@@ -214,7 +187,17 @@ namespace DwarfFortress_HeadlessGUI
             }
         }
 
-        private void textBox4_TextChanged(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            worldName = this.comboBox1.GetItemText(this.comboBox1.SelectedItem);
+        }
+
+        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void openFileDialog3_FileOk(object sender, CancelEventArgs e)
         {
 
         }
