@@ -24,7 +24,7 @@ namespace DwarfFortress_HeadlessGUI
         string tempName;
         string worldGenFolder;
         string worldGenFile = "world_gen.txt";
-        
+
 
         int worldInt;
         int runThis = 1;
@@ -97,6 +97,8 @@ namespace DwarfFortress_HeadlessGUI
                     //MessageBox.Show(tempArgs);
                     headless.Start();
                     headless.WaitForExit();
+                    worldNumber = Convert.ToString(Convert.ToInt32(worldNumber) + 1);
+                    textBox2.Text = worldNumber;
                 }
                 finally
                 {
@@ -169,7 +171,7 @@ namespace DwarfFortress_HeadlessGUI
 
 
 
-        
+
 
         private void label3_Click(object sender, EventArgs e)
         {

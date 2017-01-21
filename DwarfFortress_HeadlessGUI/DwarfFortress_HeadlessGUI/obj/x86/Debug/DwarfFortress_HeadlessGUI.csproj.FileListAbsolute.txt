@@ -8,3 +8,13 @@ E:\VS2010projects\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\obj\x86\De
 E:\VS2010projects\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\obj\x86\Debug\DwarfFortress_HeadlessGUI.csprojResolveAssemblyReference.cache
 E:\VS2010projects\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\bin\Debug\INIFileParser.dll
 E:\VS2010projects\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\bin\Debug\INIFileParser.xml
+C:\Users\JAMartin\Documents\Visual Studio 2010\DF_commandlineGUI\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\obj\x86\Debug\DwarfFortress_HeadlessGUI.exe
+C:\Users\JAMartin\Documents\Visual Studio 2010\DF_commandlineGUI\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\obj\x86\Debug\DwarfFortress_HeadlessGUI.pdb
+C:\Users\JAMartin\Documents\Visual Studio 2010\DF_commandlineGUI\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\bin\Debug\DwarfFortress_HeadlessGUI.exe
+C:\Users\JAMartin\Documents\Visual Studio 2010\DF_commandlineGUI\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\bin\Debug\DwarfFortress_HeadlessGUI.pdb
+C:\Users\JAMartin\Documents\Visual Studio 2010\DF_commandlineGUI\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\bin\Debug\INIFileParser.dll
+C:\Users\JAMartin\Documents\Visual Studio 2010\DF_commandlineGUI\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\bin\Debug\INIFileParser.xml
+C:\Users\JAMartin\Documents\Visual Studio 2010\DF_commandlineGUI\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\obj\x86\Debug\DwarfFortress_HeadlessGUI.csprojResolveAssemblyReference.cache
+C:\Users\JAMartin\Documents\Visual Studio 2010\DF_commandlineGUI\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\obj\x86\Debug\DwarfFortress_HeadlessGUI.Form1.resources
+C:\Users\JAMartin\Documents\Visual Studio 2010\DF_commandlineGUI\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\obj\x86\Debug\DwarfFortress_HeadlessGUI.Properties.Resources.resources
+C:\Users\JAMartin\Documents\Visual Studio 2010\DF_commandlineGUI\DwarfFortress_HeadlessGUI\DwarfFortress_HeadlessGUI\obj\x86\Debug\DwarfFortress_HeadlessGUI.csproj.GenerateResource.Cache
