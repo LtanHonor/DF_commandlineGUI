@@ -11,3 +11,4 @@ Completed Features
 * Open world_gen.txt and grab all TITLE world names
 * Store the working folder location into config.txt
 * Read config.txt and auto populate fields for quicker running!
+* Added Radom Seed Generation!
