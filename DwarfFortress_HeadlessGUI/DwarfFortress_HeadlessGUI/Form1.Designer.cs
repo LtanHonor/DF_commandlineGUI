@@ -50,7 +50,7 @@
             this.button2.Location = new System.Drawing.Point(285, 69);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(106, 23);
-            this.button2.TabIndex = 1;
+            this.button2.TabIndex = 5;
             this.button2.Text = "Run Generator!";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -87,7 +87,7 @@
             this.button4.Location = new System.Drawing.Point(59, 37);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(121, 23);
-            this.button4.TabIndex = 6;
+            this.button4.TabIndex = 1;
             this.button4.Text = "Dwarf Fortress Folder";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
@@ -98,7 +98,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(49, 20);
             this.textBox2.TabIndex = 8;
-            this.textBox2.Text = "10";
+            this.textBox2.Text = "4";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
@@ -141,7 +141,7 @@
             this.comboBox1.Location = new System.Drawing.Point(221, 38);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 13;
+            this.comboBox1.TabIndex = 2;
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // Form1
