@@ -74,7 +74,10 @@ namespace DwarfFortress_HeadlessGUI
         {
             int loopNum = genNumber;
             if (genNumber > 1)
+            {
                 seedType = "RANDOM";
+                textBox1.Text = seedType;
+            }
             while (loopNum > 0)
             {
                 #region /* Running Dwarf Fortress with the chosen options */
@@ -203,6 +206,11 @@ namespace DwarfFortress_HeadlessGUI
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
             genNumber = Convert.ToInt16(textBox3.Text);
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

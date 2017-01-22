@@ -53,7 +53,7 @@
             this.button2.Location = new System.Drawing.Point(286, 100);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(106, 23);
-            this.button2.TabIndex = 5;
+            this.button2.TabIndex = 6;
             this.button2.Text = "Run Generator!";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
@@ -101,7 +101,7 @@
             this.textBox2.Location = new System.Drawing.Point(551, 69);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(49, 20);
-            this.textBox2.TabIndex = 8;
+            this.textBox2.TabIndex = 7;
             this.textBox2.Text = "4";
             this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
@@ -138,6 +138,7 @@
             this.textBox4.Size = new System.Drawing.Size(636, 159);
             this.textBox4.TabIndex = 12;
             this.textBox4.Text = resources.GetString("textBox4.Text");
+            this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // comboBox1
             // 
@@ -154,7 +155,7 @@
             this.checkBox1.Location = new System.Drawing.Point(377, 30);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(141, 17);
-            this.checkBox1.TabIndex = 13;
+            this.checkBox1.TabIndex = 4;
             this.checkBox1.Text = "Generate Random Seed";
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
@@ -174,7 +175,7 @@
             this.textBox3.MaxLength = 2;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(31, 20);
-            this.textBox3.TabIndex = 15;
+            this.textBox3.TabIndex = 5;
             this.textBox3.Text = "1";
             this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
