@@ -19,7 +19,6 @@ namespace DwarfFortress_HeadlessGUI
         string worldSeed;
         string workingFolder;
         string workingFilename = @"Dwarf Fortress.exe";
-        string worldNumber;
         List<string> worldArray = new List<string>();
         string tempName;
         string worldGenFolder;
@@ -28,12 +27,15 @@ namespace DwarfFortress_HeadlessGUI
 
         int worldInt;
         int runThis = 1;
+        int genNumber = 1;
+        int worldNumber;
 
         public Form1()
         {
             // Loading up the program.  Hopefully the config file bit works!
             InitializeComponent();
             seedType = textBox1.Text;
+            genNumber = Convert.ToInt16(textBox3.Text);
             if (File.Exists(configPath))
             {
                 FileStream CF = new FileStream(configPath, FileMode.OpenOrCreate, FileAccess.Read);
@@ -70,42 +72,48 @@ namespace DwarfFortress_HeadlessGUI
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-            #region /* Running Dwarf Fortress with the chosen options */
-            if (runThis >= 1)
-                #region /* To prevent an overflow, the following section used is */
-                try
+            int loopNum = genNumber;
+            if (genNumber > 1)
+                seedType = "RANDOM";
+            while (loopNum > 0)
+            {
+                #region /* Running Dwarf Fortress with the chosen options */
+                if (runThis >= 1)
+                    #region /* To prevent an overflow, the following section used is */
+                    try
+                    {
+                        Process headless = new Process();
+                        headless.StartInfo.UseShellExecute = false;
+                        headless.StartInfo.WorkingDirectory = @workingFolder;
+                        headless.StartInfo.FileName = @workingFilename;
+                        string tempArgs = @" -gen " + @worldNumber + @" " + @seedType + " \"" + @worldName + "\"";
+                        headless.StartInfo.Arguments = @" -gen " + @worldNumber + @" " + @seedType + " \"" + @worldName + "\""; // if you need some
+                        headless.StartInfo.CreateNoWindow = true;
+                        //headless.EnableRaisingEvents = true;
+                        //MessageBox.Show(tempArgs);
+                        headless.Start();
+                        headless.WaitForExit();
+                        worldNumber = worldNumber + 1;
+                        textBox2.Text = Convert.ToString(worldNumber);
+                        FileStream CF = new FileStream(configPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
+                        StreamWriter outConfig = new StreamWriter(CF);
+                        outConfig.WriteLine(@workingFolder);
+                        outConfig.Close();
+                    }
+                    finally
+                    {
+                    }
+                    #endregion
+                #region /* Should never end up here, but just in case */
+                else
                 {
-                    Process headless = new Process();
-                    headless.StartInfo.UseShellExecute = false;
-                    headless.StartInfo.WorkingDirectory = @workingFolder;
-                    headless.StartInfo.FileName = @workingFilename;
-                    string tempArgs = @" -gen " + @worldNumber + @" " + @seedType + " \"" + @worldName + "\"";
-                    headless.StartInfo.Arguments = @" -gen " + @worldNumber + @" " + @seedType + " \"" + @worldName + "\""; // if you need some
-                    headless.StartInfo.CreateNoWindow = true;
-                    //headless.EnableRaisingEvents = true;
-                    //MessageBox.Show(tempArgs);
-                    headless.Start();
-                    headless.WaitForExit();
-                    worldNumber = Convert.ToString(Convert.ToInt32(worldNumber) + 1);
-                    textBox2.Text = worldNumber;
-                    FileStream CF = new FileStream(configPath, FileMode.OpenOrCreate, FileAccess.ReadWrite);
-                    StreamWriter outConfig = new StreamWriter(CF);
-                    outConfig.WriteLine(@workingFolder);
-                    outConfig.Close();
-                }
-                finally
-                {
+                    Console.WriteLine("\nNothing was Passed as an Arguement!");
                 }
                 #endregion
-            #region /* Should never end up here, but just in case */
-            else
-            {
-                Console.WriteLine("\nNothing was Passed as an Arguement!");
+                textBox2.Text = Convert.ToString(worldNumber);
+                loopNum--;
+                #endregion
             }
-            #endregion
-
-            #endregion
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -150,7 +158,7 @@ namespace DwarfFortress_HeadlessGUI
         {
             // This is the Region Number that the program fills in automatically.  
             // It can be changed as the user wants, but there is a higher likelihood that the program will crash
-            worldNumber = textBox2.Text;
+            worldNumber = Convert.ToInt16(textBox2.Text);
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -190,6 +198,11 @@ namespace DwarfFortress_HeadlessGUI
                 seedType = finalString;
                 textBox1.Text = seedType;
             }
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            genNumber = Convert.ToInt16(textBox3.Text);
         }
     }
 }
