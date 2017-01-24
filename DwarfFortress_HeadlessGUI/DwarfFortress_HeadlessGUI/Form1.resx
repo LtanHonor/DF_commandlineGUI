@@ -131,7 +131,7 @@
 
  1) Click on the Dwarf Fortress Folder button to browse to where your installation lives
       a) Upon clicking ok, your "Dwarf Fortress.exe", Template World Name, and the amount of Regions in your save will update
- 2) Enter in your World Gen Seed
+ 2) Enter in your World Gen Seed - CURRENTLY DISABLED SEEDS ARE NOT PASSING AS EXPECTED ONLY RANDOM IS USED!!!
       a) No special characters please as I don't think that DF likes them anyways
       b) If you would like a DF generated RANDOM seed, leave this field alone
       c) You can click on Generate Random Seed to use the programs randomness

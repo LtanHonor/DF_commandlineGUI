@@ -63,6 +63,7 @@
             this.textBox1.Location = new System.Drawing.Point(377, 69);
             this.textBox1.MaxLength = 20;
             this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(141, 20);
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "RANDOM";
@@ -135,7 +136,7 @@
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.ReadOnly = true;
-            this.textBox4.Size = new System.Drawing.Size(636, 159);
+            this.textBox4.Size = new System.Drawing.Size(650, 159);
             this.textBox4.TabIndex = 12;
             this.textBox4.Text = resources.GetString("textBox4.Text");
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
@@ -152,6 +153,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
+            this.checkBox1.Enabled = false;
             this.checkBox1.Location = new System.Drawing.Point(377, 30);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(141, 17);
@@ -183,7 +185,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(665, 318);
+            this.ClientSize = new System.Drawing.Size(676, 318);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.checkBox1);

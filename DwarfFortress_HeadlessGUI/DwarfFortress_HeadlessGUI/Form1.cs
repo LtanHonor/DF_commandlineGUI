@@ -16,7 +16,6 @@ namespace DwarfFortress_HeadlessGUI
     {
         string seedType;
         string worldName;
-        string worldSeed;
         string workingFolder;
         string workingFilename = @"Dwarf Fortress.exe";
         List<string> worldArray = new List<string>();
@@ -25,7 +24,6 @@ namespace DwarfFortress_HeadlessGUI
         string worldGenFile = "world_gen.txt";
         string configPath = @"config.txt";
 
-        int worldInt;
         int runThis = 1;
         int genNumber = 1;
         int worldNumber;
